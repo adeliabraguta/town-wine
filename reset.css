@@ -30,6 +30,9 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	min-height: 100vh;
+	background: rgb(211,232,248);
+	background: linear-gradient(180deg, rgba(211,232,248,1) 0%, rgba(255,255,255,1) 50%);
 }
 ol, ul {
 	list-style: none;
@@ -46,3 +49,4 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+

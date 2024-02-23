@@ -1,1 +1,25 @@
-/* add your CSS here */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap');
+header{
+    width: 100vw;
+    background-color: white;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    .header_wrapper{
+        padding: 32px 96px;
+        width: inherit;
+        display: flex;
+        align-items: center;
+    }
+    & h1{
+        font-family: "Dancing Script", cursive;
+        font-size: 32px;
+    }
+    & div {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+    }
+}
