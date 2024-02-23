@@ -1,25 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap');
-header{
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto&display=swap');
+
+header {
     width: 100vw;
-    background-color: white;
+    background-color: #f5f5f5;
+    opacity: 0.8;
     position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-    .header_wrapper{
-        padding: 32px 96px;
+
+    .header_wrapper {
+        padding: 24px 96px;
         width: inherit;
         display: flex;
         align-items: center;
     }
-    & h1{
+
+    & h1 {
         font-family: "Dancing Script", cursive;
         font-size: 32px;
     }
+
     & div {
         display: flex;
         justify-content: space-between;
         gap: 24px;
     }
 }
+
+.home_section {
+    height: 85vh;
+    background-image: url("assets/pexels-ramon-perucho-19772197.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    place-items: center;
+    place-content: center;
+
+    & h1 {
+        padding-top: 48px;
+        font-family: "Lora", serif;
+        font-size: 48px;
+        color: white;
+    }
+    & span {
+        color: white;
+        font-weight: 300;
+    }
+
+}
+
+.arrow {
+    margin-top: 48px;
+    position: relative;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+
+    & span {
+        height: 3px;
+        width: 30px;
+        position: absolute;
+        background: #fff;
+        transition: 0.4s ease;
+    }
+    span:first-child {
+        transform: rotate(45deg);
+        left: 25%;
+        bottom: 35%;
+    }
+
+    span:nth-child(2) {
+        transform: rotate(-45deg);
+        left: 45%;
+        bottom: 35%;
+    }
+
+    span:nth-child(3) {
+        transform: rotate(45deg);
+        left: 25%;
+        bottom: 54%;
+    }
+
+    span:nth-child(4) {
+        transform: rotate(-45deg);
+        left: 45%;
+        bottom: 54%;
+    }
+}
+
+.arrow:hover span:nth-child(1) {
+    transform: rotate(-135deg);
+}
+
+.arrow:hover span:nth-child(2) {
+    transform: rotate(135deg);
+}
+
+.arrow:hover span:nth-child(3) {
+    transform: rotate(225deg);
+}
+
+.arrow:hover span:nth-child(4) {
+    transform: rotate(-225deg);
+}
+
+
