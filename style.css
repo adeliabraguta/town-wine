@@ -129,7 +129,7 @@ header {
         left: 128px;
         top: -128px;
         width: 25vw;
-        padding: 96px 96px 0 96px;
+        padding: 64px 96px 0 96px;
         background-color: white;
 
         & h2 {
@@ -142,64 +142,64 @@ header {
         }
 
         & p {
-            padding-top: 48px;
+            padding-top: 32px;
             text-align: justify;
+            line-height: 25px;
         }
 
         img {
             width: inherit;
             margin-left: -90px;
-            margin-top: 70px;
             mix-blend-mode: multiply;
         }
     }
 }
 
-.wine_section {
-    padding: 150px 96px 150px 96px;
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
 
-    & .description {
+    & h2 {
+        position: relative;
+        text-transform: uppercase;
+        text-align: center;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: 500;
 
-        & h2 {
-            position: relative;
-            text-transform: uppercase;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: 500;
-
-            &::before {
-                font-family: "Lora", serif;
-                content: 'WINES';
-                position: absolute;
-                top: -50px;
-                color: #cfbc9e;
-                font-weight: 500;
-                font-size: 13vw;
-                opacity: 0.2;
-            }
-        }
-
-        & hr {
-            margin: 0;
-            height: 3px;
-            width: 40px;
-            background-color: #cfbc9e;
-            text-align: center;
+        &::before {
+            font-family: "Lora", serif;
+            content: 'WINES';
+            position: absolute;
+            top: -50px;
             color: #cfbc9e;
-            border: none;
-        }
-
-        & p {
-            width: 600px;
-            text-align: center;
+            font-weight: 500;
+            font-size: 13vw;
+            opacity: 0.2;
         }
     }
+
+    & hr {
+        margin: 0;
+        height: 3px;
+        width: 40px;
+        background-color: #cfbc9e;
+        text-align: center;
+        color: #cfbc9e;
+        border: none;
+    }
+
+    & p {
+        width: 600px;
+        text-align: center;
+    }
+}
+
+.wine_section {
+    padding: 150px 96px 150px 96px;
 
     & .wines_container {
         padding: 96px 0;
@@ -317,20 +317,21 @@ header {
 
 .certification_section {
     background-image: url("assets/landscape.webp");
-    height: 70vh;
+    height: 80vh;
 
     & div {
-        top: -80px;
-        padding: 128px 96px;
+        top: -70px;
+        padding: 64px 96px;
         background-color: #fbf5e5;
     }
 }
 
 .process_section {
     position: relative;
+    padding: 96px;
+
     & h2 {
         font-family: "Lora", serif;
-        padding-top: 96px;
         text-align: end;
         color: #cfbc9e;
         font-weight: 500;
@@ -347,28 +348,21 @@ header {
         grid-gap: 12px;
         overflow: hidden;
 
-        &:before{
+        &:before {
             content: url("assets/grape-leaves.png");
             position: absolute;
             z-index: -1;
             left: -50px;
-            bottom: 20px;
+            bottom: 120px;
             transform: rotate(20deg);
             filter: blur(2px);
         }
-        /*&:after{*/
-        /*    content: url("assets/purple-grape-1 (Custom).png");*/
-        /*    position: absolute;*/
-        /*    width: 80px;*/
-        /*    z-index: -1;*/
-        /*    top: 350px;*/
-        /*    right: 175px;*/
-        /*}*/
 
         & img {
             height: 300px;
         }
-        & img:nth-of-type(1){
+
+        & img:nth-of-type(1) {
             grid-column: 1;
             grid-row: 1/2;
         }
@@ -378,7 +372,7 @@ header {
             grid-row: 2/3;
         }
 
-        & img:nth-of-type(3){
+        & img:nth-of-type(3) {
             margin-top: -60px;
             height: auto;
             width: 450px;
@@ -391,16 +385,81 @@ header {
             grid-row: 1;
             justify-self: center;
             align-self: center;
-            & h3{
+
+            & h3 {
                 font-size: 18px;
                 font-weight: 500;
                 padding-bottom: 24px;
             }
-            & p{
+
+            & p {
                 padding-top: 12px;
             }
         }
+    }
+}
 
+.winemakers_section {
+    padding: 48px 96px 96px 96px;
+    position: relative;
+
+    & h2 {
+        &::before {
+            font-family: "Lora", serif;
+            content: 'WINEMAKER';
+            position: absolute;
+            top: -90px;
+            color: #cfbc9e;
+            font-weight: 500;
+            font-size: 13vw;
+            opacity: 0.2;
+        }
+    }
+
+    & .winemakers_container {
+        padding-top: 128px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        overflow: hidden;
+        &:before{
+            content: url("assets/purple-grape-1 (Custom).png");
+            position: absolute;
+            width: 80px;
+            z-index: -1;
+            bottom: 200px;
+            right: 155px;
+        }
+
+        & .winemaker {
+            width: 337px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            & img {
+                height: 450px;
+                width: auto;
+            }
+            & h3 {
+                padding-top: 12px;
+                font-size: 24px;
+                font-weight: 500;
+            }
+
+            & span {
+                font-family: "Lora", serif;
+                font-size: 20px;
+                padding-top: 4px;
+                color: #cfbc9e;
+            }
+             & p {
+                 padding-top: 24px;
+                 text-align: justify;
+                 line-height: 25px;
+
+             }
+
+        }
     }
 }
 
