@@ -477,3 +477,85 @@ header {
     }
 }
 
+.contact_section {
+    padding: 96px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
+    gap: 24px;
+.contact{
+    max-width: 35vw;
+    justify-self: end;
+    & h2 {
+        padding-top: 12px;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    & p {
+        font-family: "Lora", serif;
+        font-size: 20px;
+        padding-top: 12px;
+        color: #cfbc9e;
+    }
+}
+
+    & form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        max-width: 35vw;
+
+
+        textarea:focus, input:focus {
+            outline: none;
+        }
+
+        & label {
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+            width: 100%;
+        }
+
+        & label span {
+            visibility: hidden;
+            font-size: 0;
+            transition: font-size 0.3s ease-in-out;
+        }
+
+        & input, textarea {
+            border: 2px solid #cfbc9e;
+            padding: 18px 24px;
+            width: 100%;
+        }
+
+        & input:focus ~ span, textarea:focus ~ span {
+            visibility: visible;
+            font-size: 12px;
+            margin-right: 16px;
+            font-weight: 500;
+            min-width: max-content;
+        }
+
+        .button_container {
+            display: flex;
+            justify-content: space-between;
+            & span{
+                font-family: "Lora", serif;
+            }
+            & button {
+                align-self: end;
+                width: min-content;
+                font-family: "Lora", serif;
+                background-color: white;
+                border: 2px solid #9c8d77;
+                font-size: 18px;
+                color: #9c8d77;
+                padding: 12px 20px;
+            }
+
+        }
+    }
+}
+
+
