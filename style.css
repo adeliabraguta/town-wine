@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto&display=swap');
-
+html {
+    scroll-behavior: smooth;
+}
 header {
     width: 100vw;
     background-color: rgba(255, 255, 255, .4);
@@ -16,9 +18,21 @@ header {
         align-items: center;
     }
 
+    & a {
+        cursor: pointer;
+        text-decoration: none;
+        transition: 0.3s ease;
+        color: #000;
+
+        &:hover {
+            color: #445407;
+        }
+    }
+
     & h1 {
-        font-family: "Dancing Script", cursive;
-        font-size: 32px;
+        font-family: "Lora", serif;
+        font-size: 24px;
+        cursor: pointer;
     }
 
     & div {
@@ -48,11 +62,11 @@ header {
         padding-top: 48px;
         font-family: "Lora", serif;
         font-size: 48px;
-        color: white;
+        color: #fff;
     }
 
     & span {
-        color: white;
+        color: #fff;
         font-weight: 300;
     }
 
@@ -63,12 +77,12 @@ header {
     position: relative;
     border: 3px solid #fff;
     border-radius: 100%;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
 
     & span {
         height: 3px;
-        width: 30px;
+        width: 22px;
         position: absolute;
         background: #fff;
         transition: 0.4s ease;
@@ -130,7 +144,7 @@ header {
         top: -128px;
         width: 25vw;
         padding: 64px 96px 0 96px;
-        background-color: white;
+        background-color: #fff;
 
         & h2 {
             font-size: 24px;
@@ -328,7 +342,7 @@ header {
 
 .process_section {
     position: relative;
-    padding: 96px;
+    padding: 96px 96px 0 96px;
 
     & h2 {
         font-family: "Lora", serif;
@@ -400,7 +414,7 @@ header {
 }
 
 .winemakers_section {
-    padding: 48px 96px 96px 96px;
+    padding: 150px 96px 96px 96px;
     position: relative;
 
     & h2 {
@@ -482,22 +496,24 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
     gap: 24px;
-.contact{
-    max-width: 35vw;
-    justify-self: end;
-    & h2 {
-        padding-top: 12px;
-        font-size: 24px;
-        font-weight: 500;
-    }
 
-    & p {
-        font-family: "Lora", serif;
-        font-size: 20px;
-        padding-top: 12px;
-        color: #cfbc9e;
+    .contact {
+        max-width: 35vw;
+        justify-self: end;
+
+        & h2 {
+            padding-top: 12px;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        & p {
+            font-family: "Lora", serif;
+            font-size: 20px;
+            padding-top: 12px;
+            color: #cfbc9e;
+        }
     }
-}
 
     & form {
         display: flex;
@@ -540,22 +556,79 @@ header {
         .button_container {
             display: flex;
             justify-content: space-between;
-            & span{
+
+            & span {
                 font-family: "Lora", serif;
             }
+
             & button {
+                cursor: pointer;
                 align-self: end;
                 width: min-content;
                 font-family: "Lora", serif;
-                background-color: white;
-                border: 2px solid #9c8d77;
+                background-color: #fff;
+                border: 2px solid #cfbc9e;
+                color: #cfbc9e;
                 font-size: 18px;
-                color: #9c8d77;
                 padding: 12px 20px;
+                transition: 0.3s ease;
+
+                &:hover {
+                    border: 2px solid #9c8d77;
+                    color: #9c8d77;
+                }
             }
 
         }
     }
 }
 
+footer {
+    padding: 48px 96px;
+    background-color: #04032b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+
+    & h2 {
+        padding: 12px 18px;
+        display: inline;
+        background-color: #fff;
+        color: #000;
+    }
+
+    & p {
+        color: #fff;
+        letter-spacing: 1px;
+
+        & a {
+            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s ease;
+
+            &:hover {
+                color: #cfbc9e;
+            }
+        }
+
+    }
+
+    & div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+
+        & a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 4px;
+            background-color: white;
+        }
+    }
+}
 

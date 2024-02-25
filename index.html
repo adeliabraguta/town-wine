@@ -1,10 +1,9 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>My landing page</title>
-    <!-- CHANGE THESE VALUES -->
     <link rel="stylesheet" href="reset.css"/>
     <link rel="stylesheet" href="style.css"/>
 </head>
@@ -12,35 +11,34 @@
 
 <header>
     <div class="header_wrapper">
-        <h1>Town Wine</h1>
+        <a href="#home_section">
+            <h1>TOWN WINE</h1>
+        </a>
         <div>
-            <h2>Wines</h2>
+            <a href="#wine_section"><h2>Wines</h2></a>
             <span class="circle">&#9679;</span>
-            <h2>Process</h2>
+            <a href="#process_section"><h2>Process</h2></a>
             <span class="circle">&#9679;</span>
-            <h2>About</h2>
+            <a href="#winemakers_section"><h2>Winemakers</h2></a>
             <span class="circle">&#9679;</span>
-            <h2>Contact</h2>
+            <a href="#contact_section"><h2>Contact</h2></a>
         </div>
-        <!--        <div>-->
-        <!--            <a href="#"><img src="assets/instagram.png"></a>-->
-        <!--            <a href="#"><img src="assets/facebook.png"></a>-->
-        <!--        </div>-->
     </div>
 </header>
 
-<section class="home_section">
+<section class="home_section" id="home_section">
     <h1 class="banner">Enjoy the taste of quality</h1>
+    <a href="#introduction_section">
     <div class="arrow">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-    </div>
-    <span>SCROLL DOWN FOR MORE</span>
+    </div></a>
+    <span id="introduction_section">SCROLL DOWN FOR MORE</span>
 </section>
-<section class="introduction_section">
-    <div>
+<section  class="introduction_section">
+    <div >
         <h2>TOWN WINE</h2>
         <span>- History</span>
         <p>
@@ -53,7 +51,7 @@
         <img src="assets/grape-leaves.png" alt="grape leaves"/>
     </div>
 </section>
-<section class="wine_section">
+<section class="wine_section" id="wine_section">
     <div class="description">
         <h2>Fatured wines</h2>
         <hr/>
@@ -68,9 +66,9 @@
                 <h3>MARGARET RIVER</h3>
                 <span>Semillon</span>
                 <div class="wine_details wine_details-1">
-                    <p>The story of the Semillon was born with biodynamics and the observations
+                    <p>The story of the Sémillon was born with biodynamics and the observations
                         that different, unique extraordinary wines were made around the biodynamic calendar; planets
-                        influence the wines. As the moon waxed and waned, and celestial alignments shifted, our Semillon
+                        influence the wines. As the moon waxed and waned, and celestial alignments shifted, our Sémillon
                         grapes soaked up the cosmic energies, imparting a distinct character to each harvest.</p>
 
                     <h3>$ 175.00</h3>
@@ -99,7 +97,7 @@
                 <h3>WILYABRUP</h3>
                 <span>Amber</span>
                 <div class="wine_details  wine_details-3">
-                    <p>The Amber is our orange wine made from 59% sauvignon Blanc and 41% Semillon. It is a cross
+                    <p>The Amber is our orange wine made from 59% sauvignon Blanc and 41% Sémillon. It is a cross
                         vineyard blend, both Mangan and Cullen, once again with only one flower day harvest, the rest
                         being fruit day harvests.</p>
                     <h3>$ 190.00</h3>
@@ -140,7 +138,7 @@
             NOP Certificate of Organic Operation under the IJS National
             OrganicStandard.</div>
 </section>
-<section class="process_section">
+<section class="process_section" id="process_section">
     <h2>PROCESS</h2>
     <div class="process_container">
         <div class="process_description">
@@ -156,12 +154,12 @@
                 processed.
             </p>
         </div>
-        <img src="assets/grapes-purple.webp">
-        <img src="assets/process-2.webp">
-        <img src="assets/process.webp">
+        <img src="assets/grapes-purple.webp" alt="grapes">
+        <img src="assets/process-2.webp" alt="process">
+        <img src="assets/process.webp" alt="process">
     </div>
 </section>
-<section class="winemakers_section">
+<section class="winemakers_section" id="winemakers_section">
     <div class="description">
         <h2>OUR WINEMAKERS</h2>
         <hr/>
@@ -190,7 +188,7 @@
         </div>
     </div>
 </section>
-<section class="contact_section">
+<section class="contact_section" id="contact_section">
     <div class="contact">
         <h2>CONTACT TOWN WINES</h2>
         <p>Complete the enquiry form and a member of the Town Wines team will be in touch as soon as possible.</p>
@@ -217,10 +215,24 @@
             <span>Message</span>
         </label>
         <div class="button_container">
-        <span>* Required Fields</span>
-        <button type="submit">Send</button>
+            <span>* Required Fields</span>
+            <button type="submit">Send</button>
         </div>
     </form>
 </section>
+<footer>
+    <h2>TOWN HOUSE</h2>
+    <p>
+        <a href="tel:+111111111">+ 111 11 11 11</a> <span>|</span> <a href="mailto: townwine@gmail.com">townwine@gmail
+        .com</a>
+    </p>
+    <div>
+        <a href="#"><img src="assets/linkedin.png" alt="linkedin logo"></a>
+        <a href="#"><img src="assets/instagram.png" alt="instagram logo"></a>
+        <a href="#"><img src="assets/facebook.png" alt="facebook logo"></a>
+    </div>
+
+
+</footer>
 </body>
 </html>
