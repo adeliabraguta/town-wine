@@ -102,6 +102,21 @@ header {
     place-items: center;
     place-content: center;
 
+    button{
+        padding: 12px 18px;
+        border: 2px solid #7a9715;
+        color: #7a9715;
+        background-color: transparent;
+        backdrop-filter: blur(2px);
+        cursor: pointer;
+        font-size: 24px;
+        transition: 0.3s ease;
+        &:hover{
+            border: 2px solid white;
+            color: white;
+        }
+    }
+
     h1 {
         padding-top: 48px;
         font-family: "Lora", serif;
