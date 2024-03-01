@@ -102,7 +102,7 @@ header {
     place-items: center;
     place-content: center;
 
-    button{
+    button {
         padding: 12px 18px;
         border: 2px solid #7a9715;
         color: #7a9715;
@@ -111,7 +111,8 @@ header {
         cursor: pointer;
         font-size: 24px;
         transition: 0.3s ease;
-        &:hover{
+
+        &:hover {
             border: 2px solid white;
             color: white;
         }
@@ -136,7 +137,12 @@ header {
     @media screen and (max-width: 1100px) {
         height: 70vh;
     }
+
+    @media screen and (max-width: 650px) {
+        background-image: url("assets/mobile-home-section.jpg");
+    }
 }
+
 
 .arrow {
     margin-top: 48px;
@@ -270,12 +276,14 @@ header {
         }
     }
     @media screen and (max-width: 640px) {
-        height: 100vh;
+        height: auto;
+        background-image: none;
+        div {
+            padding-bottom: 0;
+        }
     }
 
     @media screen and (max-width: 500px) {
-        height: 80vh;
-
         div {
             padding: 32px;
             height: min-content;
@@ -482,7 +490,10 @@ header {
             }
         }
     }
-
+    @media screen and (max-width: 640px) {
+        margin-top: 0;
+        padding-top: 96px;
+    }
     @media screen and (max-width: 450px) {
         .wines_container {
             padding: 96px 0;
@@ -653,6 +664,9 @@ header {
     }
 
     @media screen and (max-width: 800px) {
+        margin-top: 48px;
+        padding-top: 64px;
+
         h2 {
             text-align: center;
             font-size: 13vw;
