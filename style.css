@@ -88,6 +88,96 @@ header {
     }
 }
 
+.message {
+    margin-left: 35px;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    bottom: 35px;
+    right: 150px;
+    z-index: 3;
+    background-color: white;
+    padding: 18px 20px;
+    border: 3px solid #9c8d77;
+    max-width: 200px;
+    text-align: center;
+    line-height: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+    transition-delay: 1s;
+
+    a {
+        text-decoration: none;
+        color: #92001a;
+        font-weight: 500;
+        transition: 0.2s ease;
+
+        &:hover {
+            color: #b80020;
+        }
+    }
+
+    span {
+        color: #9c8d77;
+    }
+}
+
+.mascot {
+    cursor: pointer;
+    z-index: 3;
+    position: fixed;
+    bottom: 35px;
+    right: 10px;
+    opacity: 1;
+    animation: mascotAnimation 2s ease, swingAnimation 2s ease infinite;
+    animation-delay: 5s, 5s;
+    animation-fill-mode: both;
+
+    &:hover {
+        animation-play-state: paused;
+    }
+}
+
+.mascot_container:hover .message {
+    opacity: 1;
+    visibility: visible;
+}
+
+@keyframes mascotAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes swingAnimation {
+    20% {
+        transform: rotate(10deg);
+    }
+    40% {
+        transform: rotate(-10deg);
+    }
+    60% {
+        transform: rotate(5deg);
+    }
+    80% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
 .home_section {
     height: 85vh;
     background-image: url("assets/barrels.webp");
@@ -491,6 +581,7 @@ header {
         }
     }
     @media screen and (max-width: 640px) {
+        padding-bottom: 96px;
         margin-top: 0;
         padding-top: 96px;
     }
@@ -557,12 +648,38 @@ header {
         }
     }
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 650px) {
+        display: none;
+    }
+}
+.certification_mobile_section{
+    display: none;
+    @media screen and (max-width: 650px) {
+        display: initial;
         div {
             padding: 32px;
+            background-color: #fbf5e5;
+            h2 {
+                font-size: 24px;
+                font-weight: 500;
+            }
+
+            span {
+                color: #cfbc9e;
+            }
+
+            p {
+                padding-top: 32px;
+                text-align: justify;
+                line-height: 25px;
+            }
+        }
+        img{
+            width: 100%;
         }
     }
 }
+
 
 .process_section {
     position: relative;
@@ -828,6 +945,10 @@ header {
     }
 
     @media screen and (max-width: 640px) {
+        padding-bottom: 0;
+        .winemakers_container{
+            padding-top: 96px;
+        }
         h2 {
             &:before {
                 top: -30px;
