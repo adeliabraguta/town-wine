@@ -209,7 +209,7 @@ header {
     }
 
     h1 {
-        padding-top: 48px;
+        padding: 48px 32px 0 32px ;
         font-family: "Lora", serif;
         font-size: 48px;
         color: #fff;
@@ -608,6 +608,36 @@ header {
     }
 }
 
+.mobile_only {
+    display: none;
+}
+
+@media screen and (max-width: 950px) {
+    .mobile_only {
+        display: flex;
+        background-color: #cfbc9e;
+        padding: 32px;
+        color: white;
+        text-align: center;
+        line-height: 25px;
+
+        span {
+            color: #7a9715;
+            font-weight: 500;
+        }
+
+        a {
+            text-decoration: none;
+            color: #b80020;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: #92001a;
+            }
+        }
+    }
+}
+
 .certification_section {
     background-image: url("assets/landscape.webp");
     height: 80vh;
@@ -652,13 +682,15 @@ header {
         display: none;
     }
 }
-.certification_mobile_section{
+
+.certification_mobile_section {
     display: none;
     @media screen and (max-width: 650px) {
         display: initial;
         div {
             padding: 32px;
             background-color: #fbf5e5;
+
             h2 {
                 font-size: 24px;
                 font-weight: 500;
@@ -674,7 +706,8 @@ header {
                 line-height: 25px;
             }
         }
-        img{
+
+        img {
             width: 100%;
         }
     }
@@ -946,9 +979,10 @@ header {
 
     @media screen and (max-width: 640px) {
         padding-bottom: 0;
-        .winemakers_container{
+        .winemakers_container {
             padding-top: 96px;
         }
+
         h2 {
             &:before {
                 top: -30px;
